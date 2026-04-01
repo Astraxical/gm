@@ -359,9 +359,9 @@ class VTTExporter:
 def main():
     """CLI for VTT exporter."""
     import argparse
-    from encounter_gen import EncounterGenerator
-    from npc_gen import NPCGenerator
-    from loot_gen import LootGenerator
+    from generators.encounter_gen import EncounterGenerator
+    from generators.npc_gen import NPCGenerator
+    from generators.loot_gen import LootGenerator
 
     parser = argparse.ArgumentParser(
         description="VTT Export Tool",

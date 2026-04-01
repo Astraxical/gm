@@ -3,13 +3,16 @@
 DnD GM Toolkit - Terminal UI Launcher
 
 Launch the terminal user interface.
+
+Usage:
+    python -m tui
 """
 
 import sys
 import os
 
-# Add current directory to path
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# Add parent directory to path for imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from tui.app import main
 

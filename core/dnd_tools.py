@@ -12,14 +12,14 @@ from pathlib import Path
 
 # Import all generators
 try:
-    from sentence_forge import SentenceGenerator
-    from name_gen import NameGenerator
-    from npc_gen import NPCGenerator
-    from encounter_gen import EncounterGenerator
-    from loot_gen import LootGenerator
-    from rpg_char_gen import RPGCharacterGenerator
-    from vtt_export import VTTExporter
-    from quest_builder import QuestBuilder
+    from utilities.sentence_forge import SentenceGenerator
+    from generators.name_gen import NameGenerator
+    from generators.npc_gen import NPCGenerator
+    from generators.encounter_gen import EncounterGenerator
+    from generators.loot_gen import LootGenerator
+    from generators.rpg_char_gen import RPGCharacterGenerator
+    from utilities.vtt_export import VTTExporter
+    from generators.quest_builder import QuestBuilder
 except ImportError as e:
     print(f"Error importing modules: {e}")
     sys.exit(1)

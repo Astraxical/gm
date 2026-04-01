@@ -3,13 +3,16 @@
 DnD GM Toolkit - Desktop GUI Launcher
 
 Launch the desktop graphical user interface.
+
+Usage:
+    python -m gui
 """
 
 import sys
 import os
 
-# Add current directory to path
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# Add parent directory to path for imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from gui.app import main
 

@@ -63,7 +63,7 @@ class LootGenerator:
             data_dir: Directory containing SRD data files
         """
         if data_dir is None:
-            data_dir = Path(__file__).parent / "data"
+            data_dir = Path(__file__).parent.parent / "data"
         self.data_dir = Path(data_dir)
         self.items: List[Dict[str, Any]] = []
         self.cursed_items: List[Dict[str, Any]] = []

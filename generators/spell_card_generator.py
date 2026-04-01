@@ -237,8 +237,8 @@ class SpellCardGenerator:
         import random
         if seed is not None:
             random.seed(seed)
-        
-        self.data_dir = Path(data_dir) if data_dir else Path(__file__).parent / "data"
+
+        self.data_dir = Path(data_dir) if data_dir else Path(__file__).parent.parent / "data"
         self.spells: List[Spell] = []
         self._load_spells()
 

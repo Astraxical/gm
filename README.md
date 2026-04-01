@@ -384,11 +384,13 @@ exporter.export_to_file(export_data, "encounter.json")
 
 ```
 gm/
-├── gm_core.py              # Core utilities & base classes (SHARED)
-├── gm_data.py              # Shared data structures & tables (SHARED)
-├── gm_cli.py               # Unified CLI framework (SHARED)
+├── gm_core.py                    # Core utilities & base classes (SHARED)
+├── gm_data.py                    # Shared data structures & tables (SHARED)
+├── gm_cli.py                     # Unified CLI framework (SHARED)
+├── gm_utilities.py               # Common utility functions
+├── gm_toolkit_extra.py           # Extended toolkit features
 │
-├── generators/             # All generators (use BaseGenerator)
+├── generators/                   # All generators (use BaseGenerator)
 │   ├── encounter_gen.py
 │   ├── loot_gen.py
 │   ├── rpg_char_gen.py
@@ -401,7 +403,7 @@ gm/
 │   ├── quest_builder.py
 │   └── one_shot_builder.py
 │
-├── trackers/               # All trackers (use BaseTracker)
+├── trackers/                     # All trackers (use BaseTracker)
 │   ├── initiative_tracker.py
 │   ├── campaign_logger.py
 │   ├── status_tracker.py
@@ -410,22 +412,55 @@ gm/
 │   ├── campaign_timeline.py
 │   └── lore_database.py
 │
-├── utilities/              # Utility tools
+├── utilities/                    # Utility tools
 │   ├── sentence_forge.py
 │   ├── vtt_export.py
 │   ├── spell_card_generator.py
 │   ├── random_tables.py
 │   ├── shop_market.py
-│   ├── gm_utilities.py     # Traps, puzzles, rumors, villains
-│   └── gm_toolkit_extra.py # Tavern, background, items, etc.
+│   └── gm_utilities.py           # Traps, puzzles, rumors, villains
 │
-└── data/                   # JSON data files
+├── gui/                          # Desktop GUI (CustomTkinter)
+│   ├── __main__.py               # Run with: python -m gui
+│   ├── app.py                    # Main GUI application
+│   ├── dialogs/                  # Dialog windows
+│   ├── tabs/                     # Tab components
+│   └── widgets/                  # Reusable widgets
+│
+├── tui/                          # Terminal UI (Rich)
+│   ├── __main__.py               # Run with: python -m tui
+│   ├── app.py                    # Main TUI application
+│   ├── views/                    # View components
+│   └── widgets/                  # TUI widgets
+│
+├── ai/                           # AI features
+│   ├── ai_trainer.py
+│   ├── campaign_memory.py
+│   ├── choice_engine.py
+│   ├── linear_generator.py
+│   ├── pattern_learner.py
+│   └── sqlite_storage.py
+│
+├── rpg/                          # RPG submodule
+│   └── ...
+│
+└── data/                         # JSON data files
     ├── srd_monsters.json
     ├── srd_items.json
     ├── srd_spells.json
     ├── prefab_encounters.json
     ├── regional_treasure.json
     └── ...
+```
+
+### Running the UI
+
+```bash
+# Desktop GUI (requires customtkinter, Pillow)
+python -m gui
+
+# Terminal UI (requires rich, questionary)
+python -m tui
 ```
 
 ### Legacy Flat Structure

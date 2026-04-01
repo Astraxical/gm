@@ -22,15 +22,21 @@ try:
     from rich.live import Live
     from rich import box
 except ImportError:
-    print("Installing required packages...")
-    os.system("pip install rich questionary")
-    from rich.console import Console
-    from rich.panel import Panel
-    from rich.table import Table
-    from rich.prompt import Prompt, IntPrompt, FloatPrompt, Confirm
-    from rich import box
+    print("=" * 60)
+    print("ERROR: Missing required packages for TUI mode")
+    print("=" * 60)
+    print()
+    print("To use the Terminal UI, install the required packages:")
+    print()
+    print("  pip install rich questionary")
+    print()
+    print("Or install all optional dependencies:")
+    print("  pip install -r requirements.txt")
+    print()
+    print("=" * 60)
+    sys.exit(1)
 
-from db_manager import DatabaseManager
+from core.db_manager import DatabaseManager
 from ai.campaign_memory import CampaignMemory
 from ai.linear_generator import LinearContentGenerator
 from ai.choice_engine import ChoiceEngine
@@ -214,7 +220,7 @@ class TUIApp:
     
     def generate_encounter(self):
         """Generate an encounter."""
-        from encounter_gen import EncounterGenerator
+        from generators.encounter_gen import EncounterGenerator
         
         console.print("\n[bold]Generate Encounter[/bold]\n")
         
@@ -271,7 +277,7 @@ class TUIApp:
     
     def generate_loot(self):
         """Generate loot."""
-        from loot_gen import LootGenerator
+        from generators.loot_gen import LootGenerator
         
         console.print("\n[bold]Generate Loot[/bold]\n")
         
@@ -305,7 +311,7 @@ class TUIApp:
     
     def generate_npc(self):
         """Generate an NPC."""
-        from npc_gen import NPCGenerator
+        from generators.npc_gen import NPCGenerator
         
         console.print("\n[bold]Generate NPC[/bold]\n")
         

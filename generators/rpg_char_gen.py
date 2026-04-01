@@ -15,14 +15,14 @@ from pathlib import Path
 
 # Import from sibling modules
 try:
+    from .name_gen import NameGenerator
+    from .npc_gen import NPCGenerator
+    from .loot_gen import LootGenerator
+except ImportError:
+    # Fallback if running standalone
     from name_gen import NameGenerator
     from npc_gen import NPCGenerator
     from loot_gen import LootGenerator
-except ImportError:
-    # Fallback if running standalone
-    NameGenerator = None
-    NPCGenerator = None
-    LootGenerator = None
 
 
 class RPGCharacterGenerator:

@@ -7,7 +7,7 @@ Replaces 28+ individual scripts with one unified interface.
 
 Usage:
     python gm.py <category> <tool> [options]
-    
+
 Examples:
     python gm.py generate encounter -t forest -d medium
     python gm.py track initiative --demo
@@ -16,7 +16,13 @@ Examples:
 
 import sys
 import argparse
+from pathlib import Path
 from typing import Dict, Callable, List, Optional
+
+# Add parent directory to path for package imports
+_parent_dir = Path(__file__).parent.parent
+if str(_parent_dir) not in sys.path:
+    sys.path.insert(0, str(_parent_dir))
 
 # =============================================================================
 # TOOL REGISTRY
@@ -26,191 +32,191 @@ from typing import Dict, Callable, List, Optional
 TOOL_REGISTRY: Dict[str, Dict[str, dict]] = {
     "generate": {
         "encounter": {
-            "module": "encounter_gen",
+            "module": "generators.encounter_gen",
             "class": "EncounterGenerator",
             "description": "Generate CR-balanced encounters"
         },
         "loot": {
-            "module": "loot_gen", 
+            "module": "generators.loot_gen",
             "class": "LootGenerator",
             "description": "Generate magic items and treasure"
         },
         "character": {
-            "module": "rpg_char_gen",
+            "module": "generators.rpg_char_gen",
             "class": "RPGCharacterGenerator",
             "description": "Generate RPG characters"
         },
         "npc": {
-            "module": "npc_gen",
+            "module": "generators.npc_gen",
             "class": "NPCGenerator",
             "description": "Generate NPCs"
         },
         "name": {
-            "module": "name_gen",
+            "module": "generators.name_gen",
             "class": "NameGenerator",
             "description": "Generate fantasy names"
         },
         "dungeon": {
-            "module": "dungeon_generator",
+            "module": "generators.dungeon_generator",
             "class": "DungeonGenerator",
             "description": "Generate procedural dungeons"
         },
         "weather": {
-            "module": "weather_generator",
+            "module": "generators.weather_generator",
             "class": "WeatherGenerator",
             "description": "Generate weather forecasts"
         },
         "event": {
-            "module": "random_event_generator",
+            "module": "generators.random_event_generator",
             "class": "EventGenerator",
             "description": "Generate story events and twists"
         },
         "lair": {
-            "module": "lair_action_generator",
+            "module": "generators.lair_action_generator",
             "class": "LairActionGenerator",
             "description": "Generate lair actions and boss mechanics"
         },
         "quest": {
-            "module": "quest_builder",
+            "module": "generators.quest_builder",
             "class": "QuestBuilder",
             "description": "Generate quests"
         },
         "adventure": {
-            "module": "one_shot_builder",
+            "module": "generators.one_shot_builder",
             "class": "OneShotBuilder",
             "description": "Generate one-shot adventures"
         },
         "spell": {
-            "module": "gm_toolkit_extra",
-            "class": "SpellCreator",
+            "module": "generators.spell_card_generator",
+            "class": "SpellCardGenerator",
             "description": "Create custom spells"
         },
         "monster": {
-            "module": "gm_toolkit_extra",
+            "module": "utilities.gm_toolkit_extra",
             "class": "MonsterStatCreator",
             "description": "Create custom monsters"
         },
         "magic-item": {
-            "module": "gm_toolkit_extra",
+            "module": "utilities.gm_toolkit_extra",
             "class": "MagicItemCreator",
             "description": "Create custom magic items"
         },
         "background": {
-            "module": "gm_toolkit_extra",
+            "module": "utilities.gm_toolkit_extra",
             "class": "BackgroundGenerator",
             "description": "Generate character backgrounds"
         },
         "dream": {
-            "module": "gm_toolkit_extra",
+            "module": "utilities.gm_toolkit_extra",
             "class": "DreamVisionGenerator",
             "description": "Generate dreams and visions"
         },
         "hook": {
-            "module": "gm_toolkit_extra",
+            "module": "utilities.gm_toolkit_extra",
             "class": "PlotHookGenerator",
             "description": "Generate plot hooks"
         },
         "map": {
-            "module": "gm_toolkit_extra",
+            "module": "utilities.gm_toolkit_extra",
             "class": "TreasureMapGenerator",
             "description": "Generate treasure maps"
         },
     },
     "track": {
         "initiative": {
-            "module": "initiative_tracker",
+            "module": "trackers.initiative_tracker",
             "class": "InitiativeTracker",
             "description": "Track combat initiative"
         },
         "campaign": {
-            "module": "campaign_logger",
+            "module": "trackers.campaign_logger",
             "class": "CampaignLogger",
             "description": "Track campaign progress"
         },
         "status": {
-            "module": "status_tracker",
+            "module": "trackers.status_tracker",
             "class": "StatusTracker",
             "description": "Track party status"
         },
         "travel": {
-            "module": "travel_tracker",
+            "module": "trackers.travel_tracker",
             "class": "TravelTracker",
             "description": "Track overland travel"
         },
         "faction": {
-            "module": "faction_tracker",
+            "module": "trackers.faction_tracker",
             "class": "FactionTracker",
             "description": "Track faction relationships"
         },
         "timeline": {
-            "module": "campaign_timeline",
+            "module": "trackers.campaign_timeline",
             "class": "CampaignTimeline",
             "description": "Track campaign timeline"
         },
         "lore": {
-            "module": "lore_database",
+            "module": "trackers.lore_database",
             "class": "LoreDatabase",
             "description": "Manage campaign lore"
         },
     },
     "utility": {
         "sentence": {
-            "module": "sentence_forge",
+            "module": "utilities.sentence_forge",
             "class": "SentenceGenerator",
             "description": "Generate template-based text"
         },
         "table": {
-            "module": "random_tables",
+            "module": "utilities.random_tables",
             "class": "TableBuilder",
             "description": "Build and roll on random tables"
         },
         "shop": {
-            "module": "shop_market",
+            "module": "utilities.shop_market",
             "class": "ShopGenerator",
             "description": "Generate magic item shops"
         },
         "tavern": {
-            "module": "gm_toolkit_extra",
+            "module": "utilities.gm_toolkit_extra",
             "class": "TavernGenerator",
             "description": "Generate taverns"
         },
         "trap": {
-            "module": "gm_utilities",
+            "module": "utilities.gm_utilities",
             "class": "TrapGenerator",
             "description": "Generate traps"
         },
         "riddle": {
-            "module": "gm_utilities",
+            "module": "utilities.gm_utilities",
             "class": "PuzzleGenerator",
             "description": "Generate riddles and puzzles"
         },
         "rumor": {
-            "module": "gm_utilities",
+            "module": "utilities.gm_utilities",
             "class": "RumorGenerator",
             "description": "Generate rumors"
         },
         "villain": {
-            "module": "gm_utilities",
+            "module": "utilities.gm_utilities",
             "class": "VillainBuilder",
             "description": "Generate villains"
         },
         "camp": {
-            "module": "gm_toolkit_extra",
+            "module": "utilities.gm_toolkit_extra",
             "class": "CampEncounterGenerator",
             "description": "Generate camp encounters"
         },
         "currency": {
-            "module": "gm_toolkit_extra",
+            "module": "utilities.gm_toolkit_extra",
             "class": "CurrencyConverter",
             "description": "Convert currencies"
         },
         "spell-card": {
-            "module": "spell_card_generator",
+            "module": "generators.spell_card_generator",
             "class": "SpellCardGenerator",
             "description": "Generate spell cards"
         },
         "vtt": {
-            "module": "vtt_export",
+            "module": "utilities.vtt_export",
             "class": "VTTExporter",
             "description": "Export to VTT platforms"
         },
@@ -389,11 +395,12 @@ def run_tool(category: str, tool_name: str, args: argparse.Namespace) -> int:
         Exit code
     """
     tool_info = TOOL_REGISTRY[category][tool_name]
-    
+
     try:
-        # Import module
-        module = __import__(tool_info["module"])
-        
+        # Import module - use importlib for proper submodule import
+        import importlib
+        module = importlib.import_module(tool_info["module"])
+
         # Get generator class
         generator_class = getattr(module, tool_info["class"])
         

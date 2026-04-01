@@ -13,9 +13,10 @@ from pathlib import Path
 
 # Import from sibling modules
 try:
-    from name_gen import NameGenerator
+    from .name_gen import NameGenerator
 except ImportError:
-    NameGenerator = None
+    # Fallback if running standalone
+    from name_gen import NameGenerator
 
 
 class NPCGenerator:

@@ -16,13 +16,21 @@ try:
     from tkinter import messagebox, scrolledtext
     from PIL import Image, ImageTk
 except ImportError:
-    print("Installing required packages...")
-    os.system("pip install customtkinter Pillow")
-    import customtkinter as ctk
-    from tkinter import messagebox, scrolledtext
-    from PIL import Image, ImageTk
+    print("=" * 60)
+    print("ERROR: Missing required packages for GUI mode")
+    print("=" * 60)
+    print()
+    print("To use the Desktop GUI, install the required packages:")
+    print()
+    print("  pip install customtkinter Pillow")
+    print()
+    print("Or install all optional dependencies:")
+    print("  pip install -r requirements.txt")
+    print()
+    print("=" * 60)
+    sys.exit(1)
 
-from db_manager import DatabaseManager
+from core.db_manager import DatabaseManager
 from ai.campaign_memory import CampaignMemory
 from ai.linear_generator import LinearContentGenerator
 
@@ -421,7 +429,7 @@ class GUIApp(ctk.CTk):
     # Generate operations
     def generate_encounter(self):
         """Generate encounter."""
-        from encounter_gen import EncounterGenerator
+        from generators.encounter_gen import EncounterGenerator
         
         gen = EncounterGenerator()
         encounter = gen.generate_encounter(
@@ -444,7 +452,7 @@ class GUIApp(ctk.CTk):
     
     def generate_loot(self):
         """Generate loot."""
-        from loot_gen import LootGenerator
+        from generators.loot_gen import LootGenerator
         
         gen = LootGenerator()
         hoard = gen.generate_hoard(party_level=5, party_size=4)
@@ -461,7 +469,7 @@ class GUIApp(ctk.CTk):
     
     def generate_npc(self):
         """Generate NPC."""
-        from npc_gen import NPCGenerator
+        from generators.npc_gen import NPCGenerator
         
         gen = NPCGenerator()
         npc = gen.generate_npc(race="human")

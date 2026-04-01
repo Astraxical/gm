@@ -153,9 +153,9 @@ class ShopGenerator:
             tier=tier,
             gold_available=tier * 1000 * random.randint(1, 3)
         )
-        
-        # Generate inventory based on tier
-        num_items = random.randint(3, tier * 2)
+
+        # Generate inventory based on tier - ensure valid range
+        num_items = random.randint(3, max(3, tier * 2))
         
         for _ in range(num_items):
             item = self._generate_item(tier)

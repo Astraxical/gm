@@ -26,11 +26,11 @@ logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
 
 try:
+    from .npc_gen import NPCGenerator
+    from utilities.sentence_forge import SentenceGenerator
+except ImportError:
     from npc_gen import NPCGenerator
     from sentence_forge import SentenceGenerator
-except ImportError:
-    NPCGenerator = None
-    SentenceGenerator = None
 
 
 class QuestHook(TypedDict):
@@ -202,7 +202,7 @@ class QuestBuilder:
         if seed is not None:
             random.seed(seed)
 
-        self.data_dir = Path(data_dir) if data_dir else Path(__file__).parent / "data"
+        self.data_dir = Path(data_dir) if data_dir else Path(__file__).parent.parent / "data"
         self.quest_hooks: Optional[QuestHook] = None
         self._load_quest_hooks()
 

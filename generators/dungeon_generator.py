@@ -318,12 +318,13 @@ class DungeonGenerator:
         # Get description based on theme
         descriptions = self.ROOM_DESCRIPTIONS.get(theme, self.ROOM_DESCRIPTIONS[DungeonTheme.CRYPT])
         description = random.choice(descriptions)
-        
-        # Get features
-        features = random.sample(
-            self.ROOM_FEATURES.get(room_type, []),
-            min(2, len(self.ROOM_FEATURES.get(room_type, ["Feature"])))
-        )
+
+        # Get features - safely handle empty feature lists
+        features_list = self.ROOM_FEATURES.get(room_type, [])
+        if features_list:
+            features = random.sample(features_list, min(2, len(features_list)))
+        else:
+            features = []
         
         # Room size varies
         width = random.randint(8, 20)
