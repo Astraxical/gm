@@ -1,0 +1,279 @@
+{
+  "regions": {
+    "arctic": {
+      "name": "Arctic Tundra",
+      "description": "Frozen wastelands with ancient ice-bound treasures",
+      "treasure_tables": {
+        "minor": [
+          {"item": "Frost-touched fur pelt", "value": 15, "weight": 20},
+          {"item": "Carved ivory figurine", "value": 25, "weight": 15},
+          {"item": "Preserved mammoth tusk fragment", "value": 40, "weight": 10},
+          {"item": "Ice-blue gemstone", "value": 50, "weight": 5},
+          {"item": "Potion of resistance (cold)", "value": 100, "weight": 5}
+        ],
+        "major": [
+          {"item": "Cloak of protection (cold)", "value": 500, "weight": 3},
+          {"item": "Frost brand weapon", "value": 1500, "weight": 2},
+          {"item": "White dragon scale mail", "value": 2000, "weight": 1},
+          {"item": "Ring of warmth", "value": 800, "weight": 1},
+          {"item": "Crystal ball (ice vision)", "value": 3000, "weight": 1}
+        ],
+        "gems": [
+          {"name": "Ice diamond", "base_value": 500, "rarity": "uncommon"},
+          {"name": "Frost sapphire", "base_value": 250, "rarity": "common"},
+          {"name": "Glacial quartz", "base_value": 100, "rarity": "common"},
+          {"name": "Aurora opal", "base_value": 1000, "rarity": "rare"}
+        ],
+        "art_objects": [
+          {"name": "Carved walrus ivory sculpture", "value": 250},
+          {"name": "Frozen flower in crystal", "value": 150},
+          {"name": "Ancient runestone fragment", "value": 500},
+          {"name": "Ice giant's drinking horn", "value": 750}
+        ]
+      },
+      "special_loot": {
+        "frost_giant_chief": ["Great axe of frost", "Giant's crown of command"],
+        "white_dragon_lair": ["Dragon hoard (frozen)", "Breath weapon crystal"],
+        "ancient_ruins": ["Netherese ice magic scroll", "Preserved ancient weapon"]
+      }
+    },
+    "desert": {
+      "name": "Sandy Wastes",
+      "description": "Scorching deserts hiding ancient civilizations' wealth",
+      "treasure_tables": {
+        "minor": [
+          {"item": "Gold dust pouch", "value": 30, "weight": 10},
+          {"item": "Carved scarab amulet", "value": 45, "weight": 5},
+          {"item": "Ancient coin (pre-empire)", "value": 75, "weight": 1},
+          {"item": "Desert rose crystal", "value": 25, "weight": 5},
+          {"item": "Potion of water breathing", "value": 100, "weight": 5}
+        ],
+        "major": [
+          {"item": "Scimitar of speed", "value": 1800, "weight": 2},
+          {"item": "Djinni summoning lamp", "value": 5000, "weight": 3},
+          {"item": "Orb of sand control", "value": 2500, "weight": 2},
+          {"item": "Robes of the desert wind", "value": 1200, "weight": 1},
+          {"item": "Staff of the pyramid", "value": 4000, "weight": 4}
+        ],
+        "gems": [
+          {"name": "Sunstone", "base_value": 400, "rarity": "uncommon"},
+          {"name": "Desert amber", "base_value": 200, "rarity": "common"},
+          {"name": "Carnelian", "base_value": 150, "rarity": "common"},
+          {"name": "Phoenix ruby", "base_value": 2000, "rarity": "rare"}
+        ],
+        "art_objects": [
+          {"name": "Golden scarab statue", "value": 500},
+          {"name": "Papyrus scroll with gold leaf", "value": 300},
+          {"name": "Obsidian ankh", "value": 450},
+          {"name": "Sphinx figurine", "value": 800}
+        ]
+      },
+      "special_loot": {
+        "ancient_tomb": ["Pharaoh's curse tablet", "Mummy's burial mask"],
+        "efreeti_palace": ["Efreeti bottle", "Flame tongue sword"],
+        "oasis_shrine": ["Water elemental gem", "Blessed lotus flower"]
+      }
+    },
+    "forest": {
+      "name": "Ancient Woodlands",
+      "description": "Enchanted forests with fey-touched treasures",
+      "treasure_tables": {
+        "minor": [
+          {"item": "Dried herb bundle", "value": 10, "weight": 5},
+          {"item": "Carved wooden charm", "value": 20, "weight": 5},
+          {"item": "Elven arrowhead", "value": 35, "weight": 1},
+          {"item": "Moonstone pendant", "value": 60, "weight": 5},
+          {"item": "Potion of climbing", "value": 100, "weight": 5}
+        ],
+        "major": [
+          {"item": "Bow of the woodlands", "value": 1600, "weight": 2},
+          {"item": "Cloak of elvenkind", "value": 2500, "weight": 1},
+          {"item": "Staff of the woodlands", "value": 4000, "weight": 4},
+          {"item": "Druidic focus (ancient branch)", "value": 800, "weight": 2},
+          {"item": "Ring of tree stride", "value": 3500, "weight": 1}
+        ],
+        "gems": [
+          {"name": "Moss agate", "base_value": 100, "rarity": "common"},
+          {"name": "Jade", "base_value": 300, "rarity": "uncommon"},
+          {"name": "Emerald", "base_value": 800, "rarity": "rare"},
+          {"name": "Dryad's tear", "base_value": 1500, "rarity": "very_rare"}
+        ],
+        "art_objects": [
+          {"name": "Living wood sculpture", "value": 400},
+          {"name": "Woven bark tapestry", "value": 250},
+          {"name": "Preserved giant flower", "value": 350},
+          {"name": "Centaur horn carving", "value": 600}
+        ]
+      },
+      "special_loot": {
+        "treant_grove": ["Treant seed", "Bark of the elder tree"],
+        "fey_crossing": ["Feywild portal key", "Pixie dust vial"],
+        "druid_circle": ["Circle initiation staff", "Wild shape totem"]
+      }
+    },
+    "underdark": {
+      "name": "Deep Underground",
+      "description": "Lightless depths with exotic Underdark riches",
+      "treasure_tables": {
+        "minor": [
+          {"item": "Glowing fungus sample", "value": 15, "weight": 5},
+          {"item": "Polished stone bead", "value": 20, "weight": 5},
+          {"item": "Drow coin (spider motif)", "value": 50, "weight": 1},
+          {"item": "Adamantine fragment", "value": 100, "weight": 10},
+          {"item": "Potion of darkvision", "value": 150, "weight": 5}
+        ],
+        "major": [
+          {"item": "Drow piwafwi (cloak)", "value": 2800, "weight": 1},
+          {"item": "Boots of spider climbing", "value": 4000, "weight": 1},
+          {"item": "Adamantine weapon", "value": 1500, "weight": 3},
+          {"item": "Crystal ball (darkvision)", "value": 3500, "weight": 3},
+          {"item": "Ring of X-ray vision", "value": 5000, "weight": 1}
+        ],
+        "gems": [
+          {"name": "Deep pearl", "base_value": 600, "rarity": "rare"},
+          {"name": "Star ruby", "base_value": 1200, "rarity": "rare"},
+          {"name": "Shadow diamond", "base_value": 2500, "rarity": "very_rare"},
+          {"name": "Mithral nugget", "base_value": 400, "rarity": "uncommon"}
+        ],
+        "art_objects": [
+          {"name": "Carved myconid spore sculpture", "value": 300},
+          {"name": "Drow silk tapestry", "value": 700},
+          {"name": "Beholder eye statue", "value": 900},
+          {"name": "Mind flayer brain case", "value": 1200}
+        ]
+      },
+      "special_loot": {
+        "drow_outpost": ["Drow house insignia", "Poison collection"],
+        "mind_flayer_colony": ["Elder brain fragment", "Psionic amplifier"],
+        "duergar_mine": ["Duergar warhammer", "Enlarge/reduce crystal"]
+      }
+    },
+    "mountain": {
+      "name": "High Peaks",
+      "description": "Treacherous mountains with dwarven and giant treasures",
+      "treasure_tables": {
+        "minor": [
+          {"item": "Raw gemstone", "value": 40, "weight": 10},
+          {"item": "Dwarven token", "value": 25, "weight": 5},
+          {"item": "Mountain herb", "value": 15, "weight": 5},
+          {"item": "Eagle feather", "value": 20, "weight": 1},
+          {"item": "Potion of stone climbing", "value": 120, "weight": 5}
+        ],
+        "major": [
+          {"item": "Dwarven thrower", "value": 5500, "weight": 5},
+          {"item": "Hammer of hill giant slaying", "value": 2000, "weight": 4},
+          {"item": "Ring of feather falling", "value": 1000, "weight": 1},
+          {"item": "Armor of resistance (lightning)", "value": 3000, "weight": 5},
+          {"item": "Horn of blasting", "value": 800, "weight": 2}
+        ],
+        "gems": [
+          {"name": "Ruby", "base_value": 700, "rarity": "rare"},
+          {"name": "Sapphire", "base_value": 600, "rarity": "rare"},
+          {"name": "Mountain topaz", "base_value": 350, "rarity": "uncommon"},
+          {"name": "Dragon's eye agate", "base_value": 1800, "rarity": "very_rare"}
+        ],
+        "art_objects": [
+          {"name": "Gold-veined stone tablet", "value": 500},
+          {"name": "Dwarven rune stone", "value": 400},
+          {"name": "Giant's stone carving", "value": 800},
+          {"name": "Eagle nest trophy", "value": 200}
+        ]
+      },
+      "special_loot": {
+        "dwarven_hold": ["Ancestral axe", "Holdfast key"],
+        "giant_castle": ["Cloud giant cloud disc", "Storm giant lightning rod"],
+        "dragon_peak": ["Dragon egg (non-viable)", "Breath weapon trophy"]
+      }
+    },
+    "coastal": {
+      "name": "Seas and Shores",
+      "description": "Ocean depths and coastal treasures",
+      "treasure_tables": {
+        "minor": [
+          {"item": "Pearl", "value": 50, "weight": 1},
+          {"item": "Sea shell ornament", "value": 15, "weight": 5},
+          {"item": "Driftwood carving", "value": 20, "weight": 10},
+          {"item": "Shark tooth necklace", "value": 30, "weight": 5},
+          {"item": "Potion of water breathing", "value": 150, "weight": 5}
+        ],
+        "major": [
+          {"item": "Trident of fish command", "value": 2500, "weight": 4},
+          {"item": "Necklace of adaptation", "value": 9000, "weight": 1},
+          {"item": "Boots of striding and swimming", "value": 1200, "weight": 1},
+          {"item": "Crystal ball (aquatic vision)", "value": 4000, "weight": 3},
+          {"item": "Ship in a bottle (magical)", "value": 3000, "weight": 2}
+        ],
+        "gems": [
+          {"name": "Pearl (black)", "base_value": 800, "rarity": "rare"},
+          {"name": "Aquamarine", "base_value": 400, "rarity": "uncommon"},
+          {"name": "Sea emerald", "base_value": 1000, "rarity": "rare"},
+          {"name": "Kraken's eye", "base_value": 5000, "rarity": "legendary"}
+        ],
+        "art_objects": [
+          {"name": "Coral sculpture", "value": 400},
+          {"name": "Ship's figurehead (gold)", "value": 600},
+          {"name": "Merfolk scale mosaic", "value": 800},
+          {"name": "Lighthouse lens (prismatic)", "value": 500}
+        ]
+      },
+      "special_loot": {
+        "shipwreck": ["Captain's log (treasure map)", "Cursed doubloon"],
+        "merfolk_city": ["Trident of dominion", "Coral crown"],
+        "sea_cave": ["Water elemental orb", "Siren's song scroll"]
+      }
+    },
+    "urban": {
+      "name": "Cities and Towns",
+      "description": "Civilized settlements with merchant wealth",
+      "treasure_tables": {
+        "minor": [
+          {"item": "Guild token", "value": 25, "weight": 5},
+          {"item": "Perfume vial", "value": 30, "weight": 5},
+          {"item": "Fine clothing accessory", "value": 40, "weight": 5},
+          {"item": "Signed merchant contract", "value": 100, "weight": 1},
+          {"item": "Potion of healing (superior)", "value": 150, "weight": 5}
+        ],
+        "major": [
+          {"item": "Ring of influence", "value": 2000, "weight": 1},
+          {"item": "Cloak of many pockets", "value": 1500, "weight": 1},
+          {"item": "Quill of legal truth", "value": 3000, "weight": 1},
+          {"item": "Coin of fortune", "value": 4000, "weight": 1},
+          {"item": "Mask of charisma", "value": 2500, "weight": 1}
+        ],
+        "gems": [
+          {"name": "Cut diamond", "base_value": 1000, "rarity": "rare"},
+          {"name": "Royal sapphire", "base_value": 1500, "rarity": "very_rare"},
+          {"name": "Noble's signet ring", "base_value": 500, "rarity": "uncommon"},
+          {"name": "Crown jewel fragment", "base_value": 3000, "rarity": "legendary"}
+        ],
+        "art_objects": [
+          {"name": "Painted portrait", "value": 300},
+          {"name": "Sculpted bust", "value": 500},
+          {"name": "Tapestry of nobility", "value": 800},
+          {"name": "Royal decree scroll", "value": 1000}
+        ]
+      },
+      "special_loot": {
+        "thieves_guild": ["Master thief's tools", "Guild master's key"],
+        "noble_estate": ["Family heirloom", "Secret passage map"],
+        "temple": ["Holy relic", "Blessed vestment"]
+      }
+    }
+  },
+  "universal_magic_items": {
+    "common": ["Potion of healing", "Scroll of protection", "Ammunition +1"],
+    "uncommon": ["Weapon +1", "Armor +1", "Ring of protection", "Cloak of protection"],
+    "rare": ["Weapon +2", "Armor +2", "Ring of spell storing", "Wand of fireballs"],
+    "very_rare": ["Weapon +3", "Armor +3", "Staff of power", "Ring of regeneration"],
+    "legendary": ["Holy avenger", "Vorpal sword", "Staff of the magi", "Tome of leadership"]
+  },
+  "currency_standards": {
+    "arctic": "Barter and gem-based, gold less common",
+    "desert": "Gold dinars and silver dirhams standard",
+    "forest": "Elven leaf-gold and trade goods",
+    "underdark": "Gem currency and adamantine",
+    "mountain": "Gold and platinum dwarven coins",
+    "coastal": "Mixed currency from trade",
+    "urban": "Standard gold/silver/copper"
+  }
+}

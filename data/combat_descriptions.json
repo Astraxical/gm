@@ -1,0 +1,24 @@
+{
+  "templates": [
+    "{ATTACKER} {ATTACK_VERB} {TARGET} for {DAMAGE} damage! {EFFECT}",
+    "{ATTACKER}'s {WEAPON} {HIT_DESCRIPTION}. {TARGET} takes {DAMAGE} damage.",
+    "With a {ADVERB} {ATTACK_NOUN}, {ATTACKER} {ATTACK_VERB} {TARGET}! {CRITICAL_EFFECT}",
+    "{TARGET} {DODGE_VERB} but {ATTACKER} {FOLLOW_UP}. {DAMAGE} damage!",
+    "The battle continues as {ATTACKER} {ATTACK_VERB} {TARGET}. {RESULT}"
+  ],
+  "values": {
+    "ATTACKER": ["the warrior", "the rogue", "the wizard", "the cleric", "the ranger", "the paladin", "the barbarian", "the bard", "the druid", "the sorcerer", "you", "the goblin", "the orc", "the dragon", "the skeleton", "the bandit"],
+    "TARGET": ["the goblin", "the orc", "the dragon", "the skeleton", "the bandit", "the warrior", "the rogue", "the wizard", "the cleric", "the ranger", "you", "the troll", "the demon", "the undead knight"],
+    "ATTACK_VERB": ["slashes", "stabs", "bashes", "shoots", "hurls", "swings at", "lunges at", "strikes", "cleaves", "pierces"],
+    "WEAPON": ["longsword", "dagger", "warhammer", "bow", "fireball", "mace", "battleaxe", "rapier", "spear", "crossbow"],
+    "HIT_DESCRIPTION": ["finds its mark", "connects with a solid thud", "draws blood", "glances off armor", "strikes true", "lands a critical blow", "embeds itself deep"],
+    "DAMAGE": ["5", "8", "12", "15", "20", "25", "3", "10", "18", "7", "14", "22"],
+    "EFFECT": ["The enemy reels!", "Sparks fly from the impact!", "The creature howls in pain!", "Armor cracks under the force!", "The blow stuns the target!", "Blood sprays from the wound!", "The enemy stumbles backward!"],
+    "ADVERB": ["fierce", "calculated", "brutal", "elegant", "devastating", "precise", "thunderous", "swift", "relentless", "heroic"],
+    "ATTACK_NOUN": ["strike", "thrust", "swing", "shot", "charge", "assault", "onslaught", "barrage"],
+    "CRITICAL_EFFECT": ["A critical hit! The enemy falls!", "The attack pierces through defenses!", "A devastating blow!", "The strike echoes through the battlefield!", "Perfect form! Maximum damage!"],
+    "DODGE_VERB": ["tries to dodge", "attempts to parry", "leaps aside", "raises their shield", "rolls away"],
+    "FOLLOW_UP": ["presses the advantage", "adjusts mid-strike", "follows through", "anticipates the move", "redirects the attack"],
+    "RESULT": ["The enemy's defense crumbles!", "The fight continues!", "The enemy looks wounded!", "Victory draws near!", "The tide turns!"]
+  }
+}

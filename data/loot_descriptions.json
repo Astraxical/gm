@@ -1,0 +1,20 @@
+{
+  "templates": [
+    "You find {ARTICLE} {RARITY} {ITEM}! {DESCRIPTION} {VALUE}",
+    "Loot: {ARTICLE} {RARITY} {ITEM}. {PROPERTY}. Worth {VALUE} gp.",
+    "The chest contains {ARTICLE} {RARITY} {ITEM} {DESCRIPTION}",
+    "Reward: {ARTICLE} {RARITY} {ITEM} - {PROPERTY}",
+    "Discovered: {ARTICLE} {ITEM} ({RARITY}). {DESCRIPTION} {PROPERTY}"
+  ],
+  "values": {
+    "RARITY": ["common", "uncommon", "rare", "very rare", "legendary", "magical", "enchanted", "cursed"],
+    "ITEM": ["sword", "shield", "potion", "ring", "amulet", "staff", "armor", "boots", "cloak", "wand", "scroll", "gem", "coin purse", "artifact", "relic"],
+    "DESCRIPTION": ["that glows faintly", "covered in ancient runes", "still warm from battle", "wrapped in fine silk", "bearing a noble crest", "etched with mystical symbols", "radiating arcane energy", "with a bloodstained blade", "adorned with precious stones", "hummimg with power"],
+    "PROPERTY": ["+1 to attack rolls", "grants resistance to fire", "allows casting of Fireball once per day", "increases movement speed", "provides advantage on stealth", "heals 1d8 HP when used", "grants darkvision 60ft", "curses the wielder with bad luck", "allows breathing underwater", "grants +2 to AC"],
+    "VALUE": ["10", "50", "100", "250", "500", "1000", "2500", "5000", "10000", "5", "25", "75"],
+    "ARTICLE": ["a", "an", "the"]
+  },
+  "defaults": {
+    "ARTICLE": "a"
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "encounters": [
+    {
+      "name": "Goblin Ambush",
+      "terrain": "forest",
+      "difficulty": "easy",
+      "recommended_party_level": 2,
+      "recommended_party_size": 4,
+      "description": "A band of goblins ambush travelers on the forest road.",
+      "monsters": [
+        {"name": "Goblin Boss", "count": 1, "role": "leader"},
+        {"name": "Goblin", "count": 4, "role": "minion"}
+      ],
+      "tactics": "Goblins use Nimble Escape to hide behind trees after attacking. The boss stays in the back and throws javelins.",
+      "map_notes": "Dense trees provide half cover. Road runs north-south through the encounter area.",
+      "treasure": "25 gp, 2 javelins, crude map showing nearby cave",
+      "xp_value": 400
+    },
+    {
+      "name": "Ogre Bridge Toll",
+      "terrain": "mountain",
+      "difficulty": "medium",
+      "recommended_party_level": 3,
+      "recommended_party_size": 4,
+      "description": "An ogre demands toll from anyone crossing his bridge.",
+      "monsters": [
+        {"name": "Ogre", "count": 1, "role": "boss"}
+      ],
+      "tactics": "Ogre demands 10 gp per person. If refused, he attacks. If party pretends to pay, he might be distracted.",
+      "map_notes": "Stone bridge spans a 50-foot deep ravine. Bridge is 10 feet wide.",
+      "treasure": "45 gp, various trinkets from previous victims",
+      "xp_value": 450
+    },
+    {
+      "name": "Undead Graveyard",
+      "terrain": "graveyard",
+      "difficulty": "medium",
+      "recommended_party_level": 3,
+      "recommended_party_size": 4,
+      "description": "The dead rise from their graves at midnight.",
+      "monsters": [
+        {"name": "Skeleton", "count": 6, "role": "minion"},
+        {"name": "Zombie", "count": 4, "role": "minion"},
+        {"name": "Ghoul", "count": 2, "role": "elite"}
+      ],
+      "tactics": "Skeletons use ranged attacks from behind tombstones. Zombies and ghouls rush forward to engage in melee.",
+      "map_notes": "Graveyard with scattered tombstones (half cover). Mausoleum in center provides full cover.",
+      "treasure": "Ancient holy symbol (25 gp), potion of healing in mausoleum",
+      "xp_value": 1050
+    },
+    {
+      "name": "Dragon Wyrmling's Lair",
+      "terrain": "mountain",
+      "difficulty": "hard",
+      "recommended_party_level": 5,
+      "recommended_party_size": 4,
+      "description": "A young dragon has made its lair in a mountain cave.",
+      "monsters": [
+        {"name": "Red Dragon Wyrmling", "count": 1, "role": "boss"}
+      ],
+      "tactics": "Dragon uses flight to stay out of melee range, breathing fire when multiple enemies cluster. Retreats if below 20 HP.",
+      "map_notes": "Cave entrance 20 feet above ground. Interior chamber is 60 feet across with 30-foot ceiling.",
+      "treasure": "350 gp, gem-encrusted goblet (150 gp), scroll of fireball",
+      "xp_value": 700
+    },
+    {
+      "name": "Bandit King's Stronghold",
+      "terrain": "ruins",
+      "difficulty": "hard",
+      "recommended_party_level": 6,
+      "recommended_party_size": 5,
+      "description": "The notorious Bandit King holds court in ancient ruins.",
+      "monsters": [
+        {"name": "Bandit Captain", "count": 1, "role": "boss"},
+        {"name": "Veteran", "count": 2, "role": "elite"},
+        {"name": "Bandit", "count": 6, "role": "minion"}
+      ],
+      "tactics": "Bandits use cover and flank enemies. Captain uses Cunning Action to disengage. Veterans protect the captain.",
+      "map_notes": "Ruined castle with crumbling walls. Multiple levels provide tactical advantages.",
+      "treasure": "800 gp, longsword +1 (Captain's weapon), map to hidden treasure cache",
+      "xp_value": 2100
+    },
+    {
+      "name": "Troll Bridge",
+      "terrain": "forest",
+      "difficulty": "medium",
+      "recommended_party_level": 4,
+      "recommended_party_size": 4,
+      "description": "A troll blocks the only bridge across the river.",
+      "monsters": [
+        {"name": "Troll", "count": 1, "role": "boss"},
+        {"name": "Goblin", "count": 3, "role": "minion"}
+      ],
+      "tactics": "Troll regenerates - party needs fire or acid damage. Goblins throw rocks from distance.",
+      "map_notes": "Wooden bridge over swift river. Forest on both sides.",
+      "treasure": "65 gp, ring of swimming (from previous victim)",
+      "xp_value": 700
+    },
+    {
+      "name": "Mind Flayer Outpost",
+      "terrain": "underdark",
+      "difficulty": "deadly",
+      "recommended_party_level": 8,
+      "recommended_party_size": 5,
+      "description": "A mind flayer has established an outpost in the Underdark.",
+      "monsters": [
+        {"name": "Mind Flayer", "count": 1, "role": "boss"},
+        {"name": "Grimlock", "count": 4, "role": "minion"},
+        {"name": "Ogre", "count": 2, "role": "brute"}
+      ],
+      "tactics": "Mind flayer uses Extract Brain on weakened foes. Grimlocks attack first, ogres hold the line.",
+      "map_notes": "Natural cavern with fungal forests. Underground river provides fresh water.",
+      "treasure": "Psionic focus crystal (500 gp), potion of mind reading, map to drow city",
+      "xp_value": 3100
+    },
+    {
+      "name": "Hydra's Lake",
+      "terrain": "swamp",
+      "difficulty": "hard",
+      "recommended_party_level": 7,
+      "recommended_party_size": 4,
+      "description": "A hydra lairs in the murky waters of a swamp lake.",
+      "monsters": [
+        {"name": "Hydra", "count": 1, "role": "boss"}
+      ],
+      "tactics": "Hydra emerges from water to attack. Multiple heads allow multiple attacks. Fire prevents head regrowth.",
+      "map_notes": "Shallow lake surrounded by difficult terrain swamp. Small island in center.",
+      "treasure": "Sunken treasure chest (400 gp, 3 gems worth 100 gp each)",
+      "xp_value": 2900
+    },
+    {
+      "name": "Manticore Aerie",
+      "terrain": "hills",
+      "difficulty": "medium",
+      "recommended_party_level": 4,
+      "recommended_party_size": 4,
+      "description": "A manticore hunts from its cliffside aerie.",
+      "monsters": [
+        {"name": "Manticore", "count": 1, "role": "boss"}
+      ],
+      "tactics": "Manticore flies and shoots tail spikes. Lands to finish off wounded prey.",
+      "map_notes": "Cliff face with cave entrance 100 feet up. Open hills below.",
+      "treasure": "180 gp, human remains with leather armor +1",
+      "xp_value": 1100
+    },
+    {
+      "name": "Lich's Tower",
+      "terrain": "ruins",
+      "difficulty": "epic",
+      "recommended_party_level": 15,
+      "recommended_party_size": 5,
+      "description": "An ancient lich plots in his fortified tower.",
+      "monsters": [
+        {"name": "Lich", "count": 1, "role": "boss"},
+        {"name": "Skeleton", "count": 8, "role": "minion"},
+        {"name": "Wight", "count": 2, "role": "elite"}
+      ],
+      "tactics": "Lich uses legendary actions and spellcasting from range. Paralyzes key threats. Retreats to reform if destroyed.",
+      "map_notes": "Five-story tower with dungeon below. Warded against teleportation.",
+      "treasure": "Phylactery (must be destroyed), spellbook with 20 spells, 2000 gp, various magic items",
+      "xp_value": 18000
+    },
+    {
+      "name": "Kobold Mine Trap",
+      "terrain": "dungeon",
+      "difficulty": "easy",
+      "recommended_party_level": 1,
+      "recommended_party_size": 4,
+      "description": "Kobolds have trapped an old mine shaft.",
+      "monsters": [
+        {"name": "Kobold", "count": 8, "role": "minion"},
+        {"name": "Kobold Inventor", "count": 1, "role": "leader"}
+      ],
+      "tactics": "Kobolds use Pack Tactics and retreat through small tunnels. Traps deal 1d6 damage (DC 12 to disable).",
+      "map_notes": "Narrow mine tunnels (Small creatures have advantage). Pit traps and tripwires throughout.",
+      "treasure": "45 gp, shiny rocks collection, crude trap-making tools",
+      "xp_value": 200
+    },
+    {
+      "name": "Frost Giant Raiding Party",
+      "terrain": "arctic",
+      "difficulty": "hard",
+      "recommended_party_level": 8,
+      "recommended_party_size": 5,
+      "description": "Frost giants raid a frontier settlement.",
+      "monsters": [
+        {"name": "Frost Giant", "count": 3, "role": "elite"},
+        {"name": "Winter Wolf", "count": 2, "role": "beast"}
+      ],
+      "tactics": "Giants throw rocks from distance, then charge with great axes. Wolves flank and knock prone.",
+      "map_notes": "Snowy tundra with scattered boulders. Settlement has wooden buildings for cover.",
+      "treasure": "300 gp, frost giant jarl's axe (magic weapon), winter wolf pelts (50 gp each)",
+      "xp_value": 3900
+    },
+    {
+      "name": "Beholder's Cavern",
+      "terrain": "underdark",
+      "difficulty": "deadly",
+      "recommended_party_level": 12,
+      "recommended_party_size": 5,
+      "description": "A beholder has claimed a vast cavern as its lair.",
+      "monsters": [
+        {"name": "Beholder", "count": 1, "role": "boss"},
+        {"name": "Gazer", "count": 4, "role": "minion"}
+      ],
+      "tactics": "Beholder floats in center, using eye rays on multiple targets. Gazers provide distraction.",
+      "map_notes": "Massive cavern with stalactites (can be shot down). Underground lake in corner.",
+      "treasure": "1500 gp, beholder eye stalks (alchemical ingredients), magic ring",
+      "xp_value": 11800
+    },
+    {
+      "name": "Cultist Ritual",
+      "terrain": "swamp",
+      "difficulty": "medium",
+      "recommended_party_level": 4,
+      "recommended_party_size": 4,
+      "description": "Cultists perform a dark ritual in a swamp clearing.",
+      "monsters": [
+        {"name": "Cult Leader", "count": 1, "role": "boss"},
+        {"name": "Cult Fanatic", "count": 2, "role": "elite"},
+        {"name": "Cultist", "count": 6, "role": "minion"}
+      ],
+      "tactics": "Cultists try to complete ritual (5 rounds). Leader casts spiritual weapon. Fanatics heal leader.",
+      "map_notes": "Stone altar in center of clearing. Torches provide dim light.",
+      "treasure": "Ritual dagger (25 gp), cult robes with hidden pockets (15 gp), scroll of animate dead",
+      "xp_value": 1100
+    },
+    {
+      "name": "Kraken Attack",
+      "terrain": "ocean",
+      "difficulty": "epic",
+      "recommended_party_level": 17,
+      "recommended_party_size": 6,
+      "description": "A kraken attacks the party's ship on the open ocean.",
+      "monsters": [
+        {"name": "Kraken", "count": 1, "role": "boss"}
+      ],
+      "tactics": "Kraken stays underwater, grabbing ship and crew. Lightning bolt hits multiple targets. Swallows enemies whole.",
+      "map_notes": "Open ocean. Ship provides limited cover. Falling into water is a major hazard.",
+      "treasure": "Sunken ship treasure (5000 gp), kraken ink sac (rare alchemical ingredient)",
+      "xp_value": 50000
+    }
+  ],
+  "tags": ["ambush", "defend", "escort", "hunt", "investigate", "retrieve", "rescue", "boss", "minion", "trap", "ritual", "lair"],
+  "difficulty_guide": {
+    "easy": "Suitable for a single session, low resource drain",
+    "medium": "May require some healing resources, good single-session encounter",
+    "hard": "Will require significant resources, may need short rest after",
+    "deadly": "Potentially lethal, ensure party has escape route",
+    "epic": "Campaign climax material, ensure party is fully rested"
+  }
+}

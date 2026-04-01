@@ -1,0 +1,22 @@
+{
+  "templates": [
+    "{NAME}, {DESCRIPTION}. {PHYSICAL}. {VOICE} {QUIRK}",
+    "You encounter {NAME}, {ROLE}. {PHYSICAL} {CLOTHING}. {PERSONALITY}",
+    "{NAME} the {TITLE} {ACTION}. {PHYSICAL} {QUIRK}",
+    "Standing before you is {NAME}, {DESCRIPTION}. {PHYSICAL} {CLOTHING}. When they speak, {VOICE}",
+    "{NAME}, known as {TITLE} among {GROUP}. {PHYSICAL} {PERSONALITY} {QUIRK}"
+  ],
+  "values": {
+    "NAME": ["Aldric", "Seraphina", "Grimwald", "Lyra", "Thorin", "Elara", "Malacor", "Isolde", "Gareth", "Morgana", "Fenris", "Celestine", "Roderick", "Lysandra", "Draven", "Aurora", "Sylas", "Vespera", "Cassius", "Nyx"],
+    "DESCRIPTION": ["a weathered traveler", "an imposing figure", "a gentle soul", "a cunning individual", "a mysterious presence", "a cheerful person", "a stern authority", "a nervous wreck", "a charismatic leader", "a shadowy figure"],
+    "ROLE": ["the village blacksmith", "a traveling merchant", "the town guard captain", "a hedge wizard", "the tavern keeper", "a forest hermit", "the temple acolyte", "a mercenary captain", "the royal messenger", "a street urchin"],
+    "TITLE": ["the Wise", "the Bold", "the Silent", "the Fierce", "the Cunning", "the Just", "the Swift", "the Mighty", "the Shadow", "the Lightbringer", "the Ironfist", "the Stormcaller"],
+    "PHYSICAL": ["Tall and gaunt with piercing eyes.", "Short and stocky with calloused hands.", "Lithe and graceful with flowing hair.", "Broad-shouldered with a scarred face.", "Elderly with a long beard.", "Young and vibrant with bright eyes.", "Middle-aged with distinguished gray streaks.", "Athletic build with sun-weathered skin."],
+    "CLOTHING": ["Wears worn leather armor.", "Dressed in fine silk robes.", "Clad in battered chainmail.", "Wears a tattered cloak over simple clothes.", "Adorned in noble's finery.", "Dressed in practical traveler's garb.", "Wears the holy symbol of their deity.", "Clad in shadowy hooded robes."],
+    "VOICE": ["their voice is deep and commanding", "they speak in a soft whisper", "their voice carries authority", "they have a melodic accent", "their voice is rough and gravelly", "they speak with a stutter", "their voice is warm and inviting", "they have a booming laugh"],
+    "PERSONALITY": ["They seem trustworthy.", "Their eyes dart around suspiciously.", "They radiate confidence.", "They appear lost in thought.", "They greet you with a warm smile.", "They eye you with suspicion.", "They seem eager to help.", "They maintain an air of mystery."],
+    "QUIRK": ["Constantly fidgets with a ring.", "Has a nervous tic of touching their weapon.", "Always carries a small book.", "Smells of herbs and incense.", "Has a pet raven on their shoulder.", "Speaks in riddles.", "Offers everyone a drink.", "Collects strange trinkets.", "Has an unusual scar that glows faintly.", "Always wears mismatched gloves."],
+    "ACTION": ["greets you warmly", "eyes you suspiciously", "continues their work", "approaches with purpose", "watches from the shadows", "calls out to you", "bows respectfully", "sizes you up"],
+    "GROUP": ["the locals", "the guild", "the nobility", "the underground", "the faithful", "the merchants", "the warriors", "the scholars"]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "campaign_name": "The Dragon's Legacy",
+  "created": "2026-04-01T07:22:54.885790+00:00",
+  "last_updated": "2026-04-01T07:22:54.889530+00:00",
+  "current_session": {
+    "number": 1,
+    "title": "The Beginning",
+    "in_progress": true,
+    "started": "2026-04-01T07:22:54.886183+00:00"
+  },
+  "recent_events": [
+    {
+      "description": "Party meets at the Rusty Tankard tavern",
+      "type": "social",
+      "timestamp": "2026-04-01T07:22:54.888799+00:00",
+      "session": 1
+    },
+    {
+      "description": "Learn about missing merchant",
+      "type": "hook",
+      "timestamp": "2026-04-01T07:22:54.889188+00:00",
+      "session": 1
+    }
+  ],
+  "active_threads": [
+    {
+      "description": "Find the missing merchant",
+      "status": "active",
+      "added": "2026-04-01T07:22:54.889513+00:00",
+      "session_introduced": 1
+    }
+  ],
+  "character_states": {},
+  "npc_relationships": {},
+  "location_states": {},
+  "session_history": [],
+  "dm_notes": ""
+}

@@ -1,0 +1,31 @@
+{
+  "templates": [
+    "{NPC} approaches the party with {URGENCY}. \"{QUEST_GIVER} needs {ADVENTURERS} to {OBJECTIVE} in {LOCATION}. {REWARD} awaits those who succeed.\"",
+    "Rumors speak of {LOCATION}, where {THREAT} has been {ACTION}. {QUEST_GIVER} offers {REWARD} for {OBJECTIVE}.",
+    "A {MESSENGER} delivers a sealed letter: \"{QUEST_GIVER} requires immediate assistance. {THREAT} threatens {LOCATION}. {REWARD} for swift action.\"",
+    "At the {TAVERN}, a {NPC} whispers of {LOCATION}. \"{THREAT} must be {ACTION} before {DEADLINE}. Will you help?\"",
+    "{QUEST_GIVER} stands before you, {EMOTION}. \"I need {ADVENTURERS} to {OBJECTIVE}. The fate of {LOCATION} hangs in the balance.\"",
+    "A {POSTER} nailed to the wall reads: \"{OBJECTIVE} in {LOCATION}. {REWARD}. Inquire within at {BUILDING}.\"",
+    "The {NPC} {GESTURE} toward {LOCATION}. \"{THREAT} grows stronger. {QUEST_GIVER} pays {REWARD} for those brave enough to {OBJECTIVE}.\"",
+    "In a dream, {MYSTICAL_BEING} speaks: \"{ADVENTURERS}, you are chosen. {OBJECTIVE} in {LOCATION} before {DEADLINE}.\""
+  ],
+  "values": {
+    "NPC": ["a weathered merchant", "an anxious guard", "a hooded figure", "a frantic messenger", "a noble envoy", "a desperate farmer", "a mysterious stranger", "a wounded soldier", "a young apprentice", "an elderly priest"],
+    "QUEST_GIVER": ["the mayor", "a wealthy merchant", "the temple high priest", "a reclusive wizard", "the king's advisor", "a guild master", "a village elder", "a haunted noble", "the captain of the guard", "a forest druid"],
+    "ADVENTURERS": ["brave souls", "skilled warriors", "capable adventurers", "heroes of renown", "those seeking glory", "treasure hunters", "defenders of the realm", "wandering knights"],
+    "LOCATION": ["the abandoned mine", "the cursed forest", "the ancient ruins", "the dragon's lair", "the sunken temple", "the haunted mansion", "the goblin caves", "the frozen peaks", "the desert oasis", "the swamp of sorrows"],
+    "OBJECTIVE": ["retrieve the artifact", "defeat the monster", "rescue the prisoners", "investigate the disturbance", "clear out the infestation", "find the lost relic", "protect the caravan", "break the curse"],
+    "THREAT": ["a necromancer", "goblin raiders", "an ancient dragon", "undead hordes", "a demon cult", "bandit kings", "a rampaging giant", "dark fey", "corrupted beasts", "a lich's minions"],
+    "ACTION": ["gathering strength", "terrorizing travelers", "desecrating sacred ground", "amassing an army", "performing dark rituals", "plundering the countryside", "awakening from slumber"],
+    "REWARD": ["500 gold pieces", "a magic item from the vault", "lands and titles", "the gratitude of the realm", "1000 gold coins", "a boon from the temple", "exclusive trading rights", "a seat on the council"],
+    "URGENCY": ["great urgency in their eyes", "a look of desperation", "an air of importance", "tears streaming down their face", "a determined expression"],
+    "MESSENGER": ["raven", "court messenger", "magical projection", "speaking owl", "ghostly apparition"],
+    "TAVERN": ["Rusty Tankard", "Sleeping Dragon", "Broken Shield", "Golden Goblet", "Wandering Bard"],
+    "EMOTION": ["looking weary", "with determination", "barely containing panic", "with regal bearing", "on the verge of tears"],
+    "DEADLINE": ["the next full moon", "three days' time", "the winter solstice", "the festival ends", "the blood moon rises"],
+    "POSTER": ["weathered poster", "official decree", "handwritten notice", "magical glowing sign"],
+    "BUILDING": ["the town hall", "the Adventurer's Guild", "the Silver Unicorn inn", "the temple of Light"],
+    "GESTURE": ["gestures dramatically", "points with a trembling finger", "waves you over", "motions toward the horizon"],
+    "MYSTICAL_BEING": ["an ancient spirit", "a celestial messenger", "your deceased ancestor", "a fey lord", "a dragon deity"]
+  }
+}
